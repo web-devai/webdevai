@@ -19,7 +19,7 @@
       position: relative;
     }
 
-    /* Embedded App Frame */
+    /* Fullscreen Web Frame */
     iframe {
       width: 100%;
       height: 100%;
@@ -27,25 +27,35 @@
       display: block;
     }
 
-    /* WebDev AI Watermark Badge (Covers bottom right) */
-    .watermark-overlay {
+    /* Extended Cover Overlay (Clickable Homepage Link) */
+    .watermark-cover {
       position: fixed;
       bottom: 0;
       right: 0;
       z-index: 999999;
+      width: 220px;
+      height: 60px;
       background-color: #0f172a;
       color: #38bdf8;
-      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 0.85rem;
+      font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.5px;
-      border-top-left-radius: 8px;
-      box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.5);
-      border-left: 1px solid #334155;
-      border-top: 1px solid #334155;
-      pointer-events: auto;
-      user-select: none;
+      text-decoration: none;
+      border-top-left-radius: 10px;
+      border-top: 2px solid #38bdf8;
+      border-left: 2px solid #38bdf8;
+      box-shadow: -4px -4px 15px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .watermark-cover:hover {
+      background-color: #38bdf8;
+      color: #0f172a;
     }
   </style>
 </head>
@@ -58,9 +68,9 @@
     allowfullscreen>
   </iframe>
 
-  <div class="watermark-overlay">
-    Powered by WebDev AI
-  </div>
+  <a href="https://webdevai.base44.app" class="watermark-cover">
+    WebDev AI
+  </a>
 
 </body>
 </html>
