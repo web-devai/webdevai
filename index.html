@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDev AI</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { border: none; width: 100%; height: 100%; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebDev AI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0f172a;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      height: 50px;
+      background-color: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .brand {
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .external-link {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .external-link:hover {
+      color: #f8fafc;
+    }
+
+    /* Embedded Web Frame */
+    .frame-container {
+      width: 100%;
+      height: calc(100vh - 50px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <iframe src="https://webdevai.base44.app"></iframe>
+
+  <header>
+    <a href="#" class="brand">WebDev AI</a>
+    <a href="https://webdevai.base44.app" target="_blank" rel="noopener noreferrer" class="external-link">
+      Open original app ↗
+    </a>
+  </header>
+
+  <div class="frame-container">
+    <iframe 
+      src="https://webdevai.base44.app" 
+      title="WebDev AI App"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
 </body>
 </html>
