@@ -27,44 +27,43 @@
       display: block;
     }
 
-    /* Diagonal Curved Rectangle Overlay */
+    /* Compact Fully Curved Pill Cover */
     .badge-cover {
       position: fixed;
-      bottom: 0;
-      right: 0;
+      bottom: 6px;
+      right: 6px;
       z-index: 999999;
-      width: 235px;
-      height: 42px;
+      width: 170px;
+      height: 38px;
       
-      /* Dark Palette: Black, Really Dark Navy Blue, Dark Purple */
+      /* Dark Palette Gradient */
       background: linear-gradient(135deg, #05050d 0%, #0a0d1a 40%, #120924 75%, #2a124d 100%);
       color: #a855f7;
       text-decoration: none;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       letter-spacing: 0.5px;
       
-      /* Curved Edges */
-      border-top-left-radius: 14px;
-      border-top: 1px solid rgba(168, 85, 247, 0.3);
-      border-left: 1px solid rgba(168, 85, 247, 0.3);
-      box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.9);
+      /* Fully Curved Edges (Pill Shape) */
+      border-radius: 20px;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
       
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       transition: all 0.3s ease;
       cursor: pointer;
     }
 
-    /* Small Purple Accent Dot */
+    /* Small Glowing Dot */
     .badge-icon {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background-color: #c084fc;
       border-radius: 50%;
-      box-shadow: 0 0 8px #c084fc;
+      box-shadow: 0 0 6px #c084fc;
     }
 
     /* Hover State */
@@ -72,12 +71,13 @@
       background: linear-gradient(135deg, #0a0d1a 0%, #120924 50%, #3b156b 100%);
       color: #ffffff;
       border-color: #c084fc;
-      box-shadow: -5px -5px 25px rgba(168, 85, 247, 0.4);
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
     }
   </style>
 </head>
 <body>
 
+  <!-- Embedded Web Application -->
   <iframe 
     src="https://webdevai.base44.app" 
     title="WebDev AI"
@@ -85,6 +85,7 @@
     allowfullscreen>
   </iframe>
 
+  <!-- Compact Curved Cover Badge -->
   <a href="http://webdevai.isroot.in/" class="badge-cover">
     <span class="badge-icon"></span>
     WebDev AI
