@@ -27,7 +27,7 @@
       display: block;
     }
 
-    /* Full-Coverage Curved Badge */
+    /* Full-Coverage Badge with All Corners Curved */
     .badge-cover {
       position: fixed;
       bottom: 0;
@@ -46,10 +46,9 @@
       font-size: 0.95rem;
       letter-spacing: 0.5px;
       
-      /* Curved Top-Left Edge */
-      border-top-left-radius: 16px;
-      border-top: 1px solid rgba(192, 132, 252, 0.4);
-      border-left: 1px solid rgba(192, 132, 252, 0.4);
+      /* All corners rounded (top-left, top-right, bottom-right, bottom-left) */
+      border-radius: 16px;
+      border: 1px solid rgba(192, 132, 252, 0.4);
       box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.95);
       
       display: flex;
