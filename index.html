@@ -27,19 +27,18 @@
       display: block;
     }
 
-    /* Curved Rectangle Badge Off the Screen Edge */
+    /* Curved Rectangle Badge Floating Over Base44 */
     .badge-cover {
       position: fixed;
-      /* Offsets from the corner so it floats cleanly */
       bottom: 12px;
       right: 12px;
       z-index: 999999;
       
-      /* Dimensions tailored to completely cover the Base44 badge */
+      /* Dimensions to cover the Base44 button completely */
       width: 210px;
       height: 48px;
       
-      /* Dark Black with subtle Dark Purple Gradient */
+      /* Dark Black & Subtle Purple Gradient */
       background: linear-gradient(135deg, #090312 0%, #000000 60%, #1a0b2e 100%);
       color: #c084fc;
       text-decoration: none;
@@ -47,7 +46,7 @@
       font-size: 0.95rem;
       letter-spacing: 0.5px;
       
-      /* Curved Rectangle Styling (matching your second screenshot) */
+      /* Curved Rectangle Layout */
       border-radius: 12px;
       border: 1px solid rgba(192, 132, 252, 0.4);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.95);
@@ -60,16 +59,17 @@
       cursor: pointer;
     }
 
-    /* Glowing Accent Icon */
-    .badge-icon {
-      width: 9px;
-      height: 9px;
-      background-color: #c084fc;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #c084fc;
+    /* Code Logo Styling </ > */
+    .code-logo {
+      font-family: monospace;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #c084fc;
+      letter-spacing: -1px;
+      text-shadow: 0 0 8px rgba(192, 132, 252, 0.6);
     }
 
-    /* Hover effect */
+    /* Hover State */
     .badge-cover:hover {
       background: linear-gradient(135deg, #120624 0%, #090312 60%, #2a124d 100%);
       color: #ffffff;
@@ -77,11 +77,16 @@
       box-shadow: 0 6px 24px rgba(192, 132, 252, 0.3);
       transform: translateY(-1px);
     }
+
+    .badge-cover:hover .code-logo {
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Embedded Application -->
+  <!-- Embedded Web Application -->
   <iframe 
     src="https://webdevai.base44.app" 
     title="WebDev AI"
@@ -89,9 +94,9 @@
     allowfullscreen>
   </iframe>
 
-  <!-- Curved Floating Badge Cover -->
+  <!-- Curved Floating Badge Cover with Code Logo -->
   <a href="http://webdevai.isroot.in/" class="badge-cover">
-    <span class="badge-icon"></span>
+    <span class="code-logo">&lt;/&gt;</span>
     WebDev AI
   </a>
 
