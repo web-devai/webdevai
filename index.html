@@ -27,16 +27,16 @@
       display: block;
     }
 
-    /* Curved Rectangle Badge Floating Over Base44 */
+    /* Full-Coverage Curved Badge */
     .badge-cover {
       position: fixed;
-      bottom: 12px;
-      right: 12px;
+      bottom: 0;
+      right: 0;
       z-index: 999999;
       
-      /* Dimensions to cover the Base44 button completely */
-      width: 210px;
-      height: 48px;
+      /* Sized to guarantee full coverage of the Base44 tag */
+      width: 250px;
+      height: 52px;
       
       /* Dark Black & Subtle Purple Gradient */
       background: linear-gradient(135deg, #090312 0%, #000000 60%, #1a0b2e 100%);
@@ -46,10 +46,11 @@
       font-size: 0.95rem;
       letter-spacing: 0.5px;
       
-      /* Curved Rectangle Layout */
-      border-radius: 12px;
-      border: 1px solid rgba(192, 132, 252, 0.4);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.95);
+      /* Curved Top-Left Edge */
+      border-top-left-radius: 16px;
+      border-top: 1px solid rgba(192, 132, 252, 0.4);
+      border-left: 1px solid rgba(192, 132, 252, 0.4);
+      box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.95);
       
       display: flex;
       align-items: center;
@@ -74,8 +75,7 @@
       background: linear-gradient(135deg, #120624 0%, #090312 60%, #2a124d 100%);
       color: #ffffff;
       border-color: #c084fc;
-      box-shadow: 0 6px 24px rgba(192, 132, 252, 0.3);
-      transform: translateY(-1px);
+      box-shadow: -4px -4px 25px rgba(192, 132, 252, 0.3);
     }
 
     .badge-cover:hover .code-logo {
@@ -94,7 +94,7 @@
     allowfullscreen>
   </iframe>
 
-  <!-- Curved Floating Badge Cover with Code Logo -->
+  <!-- Full Coverage Floating Badge -->
   <a href="http://webdevai.isroot.in/" class="badge-cover">
     <span class="code-logo">&lt;/&gt;</span>
     WebDev AI
